@@ -10,15 +10,13 @@ import { MatTableDataSource, MatPaginator } from '@angular/material';
 })
 export class PersonsListComponent implements OnInit {
 
-  public displayedColumns: string[] = ['name'];
+  public displayedColumns: string[] = ['name', 'surname', 'phoneNumber', 'email'];
   public persons: Person[];
 
   public dataSource;
   public isloading = false;
 
   constructor(private personsService: PersonsService) { }
-
-  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   ngOnInit() {
     this.loadPersons();
@@ -31,7 +29,6 @@ export class PersonsListComponent implements OnInit {
         this.persons = res;
         this.dataSource = new MatTableDataSource(this.persons);
         this.isloading = true;
-        this.dataSource.paginator = this.paginator;
       });
     } catch (err) {
       console.error(`this is not good: ${err.Message}`);
@@ -44,7 +41,7 @@ export class PersonsListComponent implements OnInit {
   }
 
 
-  deleteEmployee(person: Person) {
+  deletePerson(person: Person) {
     this.personsService.deletePerson(person.id).subscribe(x => {
       this.loadPersons();
     });

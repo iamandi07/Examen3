@@ -12,7 +12,31 @@
         </mat-error>
       </mat-form-field>
 
-      </div>
+      <mat-form-field>
+        <input matInput placeholder="Surname" formControlName="surname" type="text">
+
+        <mat-error *ngIf="formGroup.get('surname').touched && formGroup.get('surname').errors && formGroup.get('surname').errors.required">
+          Surname required!
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="PhoneNumber" formControlName="phoneNumber" type="text">
+
+        <mat-error *ngIf="formGroup.get('phoneNumber').touched && formGroup.get('phoneNumber').errors && formGroup.get('phoneNumber').errors.required">
+          PhoneNumber required!
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Email" formControlName="email" type="text">
+
+        <mat-error *ngIf="formGroup.get('email').touched && formGroup.get('email').errors && formGroup.get('email').errors.required">
+          Email required!
+        </mat-error>
+      </mat-form-field>
+
+    </div>
     <div class="example-button-row">
       <button mat-raised-button color="primary" (click)="save()">Save</button>
       <button mat-raised-button color="primary" [routerLink]='routerLink'>Cancel</button>
