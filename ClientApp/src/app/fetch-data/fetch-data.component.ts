@@ -33,7 +33,7 @@ export class FetchDataComponent {
       this.inspectionPlans = result;
       console.log(this.inspectionPlans);
     }, error => console.error(error));
-  }
+    };
 
   loadEquipments() {
     this.http.get<Equipment[]>(this.baseUrl + 'api/Equipments').subscribe(result => {

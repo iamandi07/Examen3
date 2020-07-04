@@ -7,7 +7,7 @@ using FluentValidation;
 
 namespace Examen3.Validator
 {
-    public class InspectionValidator : AbstractValidator<InspectionPlan>
+    public class InspectionPlanValidator : AbstractValidator<InspectionPlan>
     {
         public InspectionPlanValidator()
         {
