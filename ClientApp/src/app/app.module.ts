@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'counter', component: CounterComponent },
   { path: 'fetch-data', component: FetchDataComponent },
   { path: 'my-route', component: CounterComponent },
-  { path: 'employees', loadChildren: './employees/employees.module#EmployeesModule' },
+  { path: 'persons', loadChildren: './persons/persons.module#PersonsModule' },
 ];
 
 @NgModule({
