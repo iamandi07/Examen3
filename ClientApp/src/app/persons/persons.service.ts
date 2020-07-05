@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { ApplicationService } from "../core/services/application.service";
 import { Injectable } from "@angular/core";
-import { Person } from "./Persons.model";
+import { Person } from "./persons.models";
 
 @Injectable()
 export class PersonsService {

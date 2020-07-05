@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Examen3.Context;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -39,12 +40,15 @@ namespace Examen3
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers()
-            .AddJsonOptions(options =>
+                .AddJsonOptions(options => 
              {
                  options.JsonSerializerOptions.IgnoreNullValues = true;
                  options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
              })
             .AddFluentValidation(fv => fv.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly()));
+            services.AddControllersWithViews()
+            .AddNewtonsoftJson(options =>
+            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddDbContext<ExamenDbContext2>(opt => opt.UseSqlServer(Configuration.GetConnectionString("ExamenDbConnectionString")));
             services.AddSwaggerGen(c =>
             {
@@ -78,6 +82,9 @@ namespace Examen3
             services
                 .AddMvc(options =>
                 {
+ //                   AuthorizationPolicy policy = new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme).RequireAuthenticatedUser().Build();
+
+//                    options.Filters.Add(new Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter(policy));
 
                     options.EnableEndpointRouting = false;
 

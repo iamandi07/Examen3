@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { PersonsService } from '../persons.service';
-import { Person } from '../Persons.model';
+import { Person } from '../persons.models';
 
 @Component({
   selector: 'app-persons-edit',
@@ -49,6 +49,9 @@ export class PersonsEditComponent implements OnInit {
     if (this.formGroup.valid) {
       let person = this.formGroup.value as Person;
       person.name = person.name;
+      person.surname = person.surname;
+      person.phoneNumber = person.phoneNumber;
+      person.email = person.email;
 
       if (this.isEdit) {
         person.id = this.personId;
@@ -68,6 +71,9 @@ export class PersonsEditComponent implements OnInit {
   initForm(person: Person) {
     this.formGroup = this.formBuilder.group({
       name: [person.name, Validators.required],
+      surname: [person.surname, Validators.required],
+      phoneNumber: [person.phoneNumber, Validators.required],
+      email: [person.email, Validators.required]
     });
   }
 

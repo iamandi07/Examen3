@@ -1,16 +1,17 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Person } from '../Persons.model';
+import { Person } from '../persons.models';
 import { PersonsService } from '../persons.service';
 import { MatTableDataSource, MatPaginator } from '@angular/material';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-persons-list',
-  templateUrl: './employees-list.component.html',
-  styleUrls: ['./employees-list.component.css']
+  templateUrl: './persons-list.component.html',
+  styleUrls: ['./persons-list.component.css']
 })
 export class PersonsListComponent implements OnInit {
 
-  public displayedColumns: string[] = ['name', 'surname', 'phoneNumber', 'email'];
+  public displayedColumns: string[] = ['name', 'surname', 'phoneNumber', 'email', 'action'];
   public persons: Person[];
 
   public dataSource;
@@ -18,9 +19,10 @@ export class PersonsListComponent implements OnInit {
 
   constructor(private personsService: PersonsService) { }
 
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+
   ngOnInit() {
     this.loadPersons();
-
   }
 
   async loadPersons() {
@@ -29,6 +31,7 @@ export class PersonsListComponent implements OnInit {
         this.persons = res;
         this.dataSource = new MatTableDataSource(this.persons);
         this.isloading = true;
+        this.dataSource.paginator = this.paginator;
       });
     } catch (err) {
       console.error(`this is not good: ${err.Message}`);
@@ -46,5 +49,4 @@ export class PersonsListComponent implements OnInit {
       this.loadPersons();
     });
   }
-
 }

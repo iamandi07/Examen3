@@ -6,10 +6,15 @@
 
   <ItemGroup>
     <Compile Remove="ClientApp\node_modules\**" />
+    <Compile Remove="ClientApp\src\app\employees\**" />
     <Content Remove="ClientApp\node_modules\**" />
+    <Content Remove="ClientApp\src\app\employees\**" />
     <EmbeddedResource Remove="ClientApp\node_modules\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\employees\**" />
     <None Remove="ClientApp\node_modules\**" />
+    <None Remove="ClientApp\src\app\employees\**" />
     <TypeScriptCompile Remove="ClientApp\node_modules\**" />
+    <TypeScriptCompile Remove="ClientApp\src\app\employees\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -44,6 +49,7 @@
     <PackageReference Include="Microsoft.AspNet.WebApi.Cors" Version="5.2.7" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.5" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.5" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.5">
