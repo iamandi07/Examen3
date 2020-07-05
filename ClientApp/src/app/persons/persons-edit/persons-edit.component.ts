@@ -10,6 +10,7 @@ import { Person } from '../persons.models';
   styleUrls: ['./persons-edit.component.css']
 })
 export class PersonsEditComponent implements OnInit {
+
   private routerLink: string = '../list';
 
   private personId: number;

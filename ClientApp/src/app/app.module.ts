@@ -25,10 +25,10 @@ const routes: Routes = [
   { path: 'counter', component: CounterComponent },
   { path: 'fetch-data', component: FetchDataComponent },
   { path: 'my-route', component: CounterComponent },
-  { path: 'employees', loadChildren: './employees/employees.module#EmployeesModule' },
+  { path: 'equipments', loadChildren: './equipments/equipments.module#EquipmentsModule' },
   { path: 'persons', loadChildren: './persons/persons.module#PersonsModule' },
   { path: 'inspectionPlans', loadChildren: './inspectionPlans/inspectionPlans.module#InspectionPlansModule' },
-  
+  { path: 'calibrations', loadChildren: './calibration/calibrations.module#CalibrationsModule' },
 ];
 
 @NgModule({

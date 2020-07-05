@@ -3,7 +3,6 @@ import { Injectable } from "@angular/core";
 import { InspectionPlan } from "./inspectionPlans.models";
 import { ApplicationService } from "../core/services/application.service";
 
-
 @Injectable()
 export class InspectionPlansService {
 

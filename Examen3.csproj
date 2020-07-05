@@ -42,6 +42,13 @@
     <Compile Remove="Migrations\20200704000539_Add-Identity.Designer.cs" />
     <Compile Remove="Migrations\20200704001842_Add-Identity.cs" />
     <Compile Remove="Migrations\20200704001842_Add-Identity.Designer.cs" />
+    <Compile Remove="Migrations\20200705195319_CRUD.cs" />
+    <Compile Remove="Migrations\20200705195319_CRUD.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Remove="ClientApp\src\app\inspection-plans.service.spec.ts" />
+    <TypeScriptCompile Remove="ClientApp\src\app\inspection-plans.service.ts" />
   </ItemGroup>
 
   <ItemGroup>

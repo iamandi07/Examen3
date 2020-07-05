@@ -1,0 +1,53 @@
+<p>Add/Edit equipment</p>
+
+<mat-card class="example-card">
+  <form *ngIf="formGroup" [formGroup]="formGroup">
+    <div class="example-container">
+
+      <mat-form-field>
+        <input matInput placeholder="Description" formControlName="description" type="text">
+
+        <mat-error *ngIf="formGroup.get('description').touched && formGroup.get('description').errors && formGroup.get('description').errors.required">
+          Description required!
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="EquipementType" formControlName="equipementType" type="text">
+
+        <mat-error *ngIf="formGroup.get('equipementType').touched && formGroup.get('equipementType').errors && formGroup.get('equipementType').errors.required">
+          Equipment Type required!
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Model" formControlName="model" type="text">
+
+        <mat-error *ngIf="formGroup.get('model').touched && formGroup.get('model').errors && formGroup.get('model').errors.required">
+          Model required!
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="SerialNumber" formControlName="serialNumber" type="text">
+
+        <mat-error *ngIf="formGroup.get('serialNumber').touched && formGroup.get('serialNumber').errors && formGroup.get('serialNumber').errors.required">
+          Serial Number required!
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="CalibrationDate" formControlName="calibrationDate" type="text">
+
+        <mat-error *ngIf="formGroup.get('calibrationDate').touched && formGroup.get('calibrationDate').errors && formGroup.get('calibrationDate').errors.required">
+          Serial Number required!
+        </mat-error>
+      </mat-form-field>
+
+    </div>
+    <div class="example-button-row">
+      <button mat-raised-button color="primary" (click)="save()">Save</button>
+      <button mat-raised-button color="primary" [routerLink]='routerLink'>Cancel</button>
+    </div>
+  </form>
+</mat-card>

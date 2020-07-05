@@ -7,5 +7,4 @@ export interface InspectionPlan {
     humidity: number;
     pressure: number;
     personId: number;
-    person: Array<Person>;
 }
