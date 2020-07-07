@@ -53,7 +53,7 @@ export class CalibrationsEditComponent implements OnInit {
       calibration.personId = calibration.personId;
 
       if (this.isEdit) {
-        calibration.id = this.calibrationId
+        calibration.equipmentId = this.calibrationId
 
         this.calibrationsService.modifyCalibration(calibration).subscribe(res => {
           this.router.navigate(['/calibrations']);

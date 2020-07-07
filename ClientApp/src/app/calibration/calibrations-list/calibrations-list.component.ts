@@ -44,7 +44,7 @@ export class CalibrationsListComponent implements OnInit {
   }
 
   deleteCalibration(calibration: Calibration) {
-    this.calibrationsService.deleteCalibration(calibration.id).subscribe(x => {
+    this.calibrationsService.deleteCalibration(calibration.equipmentId).subscribe(x => {
       this.loadCalibrations();
     });
   }

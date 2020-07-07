@@ -23,7 +23,7 @@ export class CalibrationsService {
   }
 
   modifyCalibration(calibration: Calibration) {
-    return this.http.put(`${this.applicationService.baseUrl}api/Calibrations/${calibration.id}`, calibration);
+    return this.http.put(`${this.applicationService.baseUrl}api/Calibrations/${calibration.equipmentId}`, calibration);
   }
 
   deleteCalibration(id: number) {
