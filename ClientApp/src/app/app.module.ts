@@ -48,7 +48,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     AngularMaterialModule,
-    CoreModule
+    CoreModule,
   ],
   exports: [AngularMaterialModule, CoreModule],
   providers: [],
