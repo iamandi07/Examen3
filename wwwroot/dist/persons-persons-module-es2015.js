@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1>Persons</h1>\r\n\r\n<p>Many persons in the list</p>\r\n\r\n<div class=\"example-button-row\">\r\n  <button mat-raised-button [routerLink]='[\"../edit\"]' color=\"primary\">Add</button>\r\n</div>\r\n<br>\r\n\r\n<mat-form-field>\r\n  <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\r\n</mat-form-field>\r\n\r\n<div class=\"mat-elevation-z8\">\r\n  <table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\r\n\r\n    <ng-container matColumnDef=\"name\">\r\n      <th mat-header-cell *matHeaderCellDef style=\"width:21%\"> Name </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n    </ng-container>\r\n\r\n\r\n    <ng-container matColumnDef=\"surname\">\r\n      <th mat-header-cell *matHeaderCellDef style=\"width:21%\"> Surname </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.surname}} </td>\r\n    </ng-container>\r\n\r\n    <ng-container matColumnDef=\"phoneNumber\">\r\n      <th mat-header-cell *matHeaderCellDef style=\"width:21%\"> PhoneNumber </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.phoneNumber}} </td>\r\n    </ng-container>\r\n\r\n    <ng-container matColumnDef=\"email\">\r\n      <th mat-header-cell *matHeaderCellDef style=\"width:21%\"> Email </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.email}} </td>\r\n    </ng-container>\r\n\r\n    Action Column\r\n    <ng-container matColumnDef=\"action\">\r\n      <th mat-header-cell *matHeaderCellDef style=\"width:10%\"> Action </th>\r\n      <td mat-cell *matCellDef=\"let person\">\r\n        <button mat-icon-button matTooltip=\"Edit\" [matTooltipPosition]=\"'after'\">\r\n          <mat-icon aria-label=\"Example icon-button with a heart icon\" [routerLink]=\"['../edit', person.id]\">edit</mat-icon>\r\n        </button>\r\n\r\n        <button mat-icon-button matTooltip=\"Delete\" [matTooltipPosition]=\"'after'\">\r\n          <mat-icon aria-label=\"Example icon-button with a heart icon \" (click)=\"deletePerson(person)\">delete</mat-icon>\r\n        </button>\r\n      </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n  </table>\r\n  <mat-progress-bar mode=\"indeterminate\" *ngIf=\"!persons\"></mat-progress-bar>\r\n  <!--  <mat-paginator [pageSizeOptions]=\"[5, 10, 20]\" showFirstLastButtons></mat-paginator> -->\r\n\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1>Persons</h1>\r\n\r\n<p>Many persons in the list</p>\r\n\r\n<div class=\"example-button-row\">\r\n  <button mat-raised-button [routerLink]='[\"../edit\"]' color=\"primary\">Add</button>\r\n</div>\r\n<br>\r\n\r\n<mat-form-field>\r\n  <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\r\n</mat-form-field>\r\n\r\n<div class=\"mat-elevation-z8\">\r\n  <table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\r\n\r\n    <ng-container matColumnDef=\"name\">\r\n      <th mat-header-cell *matHeaderCellDef style=\"width:20%\"> Name </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n    </ng-container>\r\n\r\n\r\n    <ng-container matColumnDef=\"surname\">\r\n      <th mat-header-cell *matHeaderCellDef style=\"width:20%\"> Surname </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.surname}} </td>\r\n    </ng-container>\r\n\r\n    <ng-container matColumnDef=\"phoneNumber\">\r\n      <th mat-header-cell *matHeaderCellDef style=\"width:20%\"> PhoneNumber </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.phoneNumber}} </td>\r\n    </ng-container>\r\n\r\n    <ng-container matColumnDef=\"email\">\r\n      <th mat-header-cell *matHeaderCellDef style=\"width:20%\"> Email </th>\r\n      <td mat-cell *matCellDef=\"let element\"> {{element.email}} </td>\r\n    </ng-container>\r\n\r\n    <ng-container matColumnDef=\"action\">\r\n      <th mat-header-cell *matHeaderCellDef style=\"width:20%\"> Action </th>\r\n      <td mat-cell *matCellDef=\"let person\">\r\n        <button mat-icon-button matTooltip=\"Edit\" [matTooltipPosition]=\"'after'\">\r\n          <mat-icon aria-label=\"Example icon-button with a heart icon\" [routerLink]=\"['../edit', person.id]\">edit</mat-icon>\r\n        </button>\r\n\r\n        <button mat-icon-button matTooltip=\"Delete\" [matTooltipPosition]=\"'after'\">\r\n          <mat-icon aria-label=\"Example icon-button with a heart icon \" (click)=\"deletePerson(person)\">delete</mat-icon>\r\n        </button>\r\n      </td>\r\n    </ng-container>\r\n\r\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n  </table>\r\n  <mat-progress-bar mode=\"indeterminate\" *ngIf=\"!persons\"></mat-progress-bar>\r\n  <mat-paginator [pageSizeOptions]=\"[5, 10, 20]\" showFirstLastButtons></mat-paginator>\r\n\r\n</div>\r\n");
 
 /***/ }),
 
@@ -111,6 +111,9 @@ let PersonsEditComponent = class PersonsEditComponent {
         if (this.formGroup.valid) {
             let person = this.formGroup.value;
             person.name = person.name;
+            person.surname = person.surname;
+            person.phoneNumber = person.phoneNumber;
+            person.email = person.email;
             if (this.isEdit) {
                 person.id = this.personId;
                 this.personsService.modifyPerson(person).subscribe(res => {
@@ -127,6 +130,9 @@ let PersonsEditComponent = class PersonsEditComponent {
     initForm(person) {
         this.formGroup = this.formBuilder.group({
             name: [person.name, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            surname: [person.surname, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            phoneNumber: [person.phoneNumber, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            email: [person.email, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]
         });
     }
 };
@@ -204,7 +210,7 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 let PersonsListComponent = class PersonsListComponent {
     constructor(personsService) {
         this.personsService = personsService;
-        this.displayedColumns = ['name', 'surname', 'phoneNumber', 'email'];
+        this.displayedColumns = ['name', 'surname', 'phoneNumber', 'email', 'action'];
         this.isloading = false;
     }
     ngOnInit() {

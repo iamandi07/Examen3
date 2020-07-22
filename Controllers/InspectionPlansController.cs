@@ -25,6 +25,8 @@ namespace Examen3.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<InspectionPlan>>> GetInspectionPlans()
         {
+            var identity = User.Identity;
+
             IQueryable<InspectionPlan> result = _context.InspectionPlans;
             var resultList = await result.OrderByDescending(t => t.Description).ToListAsync();
             return resultList;

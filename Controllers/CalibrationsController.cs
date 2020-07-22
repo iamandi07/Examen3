@@ -18,6 +18,7 @@ namespace Examen3.Controllers
 
         public CalibrationsController(ExamenDbContext2 context)
         {
+          
             _context = context;
         }
 

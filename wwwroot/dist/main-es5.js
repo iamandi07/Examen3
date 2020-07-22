@@ -121,7 +121,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<header>\r\n  <nav\r\n    class=\"navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3\"\r\n  >\r\n    <div class=\"container\">\r\n      <a class=\"navbar-brand\" [routerLink]=\"['/']\">Examen</a>\r\n      <button\r\n        class=\"navbar-toggler\"\r\n        type=\"button\"\r\n        data-toggle=\"collapse\"\r\n        data-target=\".navbar-collapse\"\r\n        aria-label=\"Toggle navigation\"\r\n        [attr.aria-expanded]=\"isExpanded\"\r\n        (click)=\"toggle()\"\r\n      >\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n      <div\r\n        class=\"navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse\"\r\n        [ngClass]=\"{ show: isExpanded }\"\r\n      >\r\n        <ul class=\"navbar-nav flex-grow\">\r\n          <li class=\"nav-item\"\r\n              [routerLinkActive]=\"['link-active']\"\r\n              [routerLinkActiveOptions]=\"{ exact: true }\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/']\">Home</a>\r\n          </li>\r\n          <!--          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n    <a class=\"nav-link text-dark\" [routerLink]=\"['/counter']\">Counter</a>\r\n  </li> -->\r\n\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/fetch-data']\">Fetch data</a>\r\n          </li>\r\n\r\n          <!-- <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n    <a class=\"nav-link text-dark\" [routerLink]=\"['/my-route']\">My route</a>\r\n  </li> -->\r\n\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/register']\">Register</a>\r\n          </li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/login']\">Sign In</a>\r\n          </li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/employees']\">Employee</a>\r\n          </li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/persons']\">Persons</a>\r\n          </li>\r\n        </ul>\r\n        </div>\r\n      </div>\r\n    </nav>\r\n  </header>\r\n";
+    __webpack_exports__["default"] = "<header>\r\n  <nav\r\n    class=\"navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3\"\r\n  >\r\n    <div class=\"container\">\r\n      <a class=\"navbar-brand\" [routerLink]=\"['/']\">Examen</a>\r\n      <button\r\n        class=\"navbar-toggler\"\r\n        type=\"button\"\r\n        data-toggle=\"collapse\"\r\n        data-target=\".navbar-collapse\"\r\n        aria-label=\"Toggle navigation\"\r\n        [attr.aria-expanded]=\"isExpanded\"\r\n        (click)=\"toggle()\"\r\n      >\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n      <div\r\n        class=\"navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse\"\r\n        [ngClass]=\"{ show: isExpanded }\"\r\n      >\r\n        <ul class=\"navbar-nav flex-grow\">\r\n          <li class=\"nav-item\"\r\n              [routerLinkActive]=\"['link-active']\"\r\n              [routerLinkActiveOptions]=\"{ exact: true }\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/']\">Home</a>\r\n          </li>\r\n          <!--          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n    <a class=\"nav-link text-dark\" [routerLink]=\"['/counter']\">Counter</a>\r\n  </li> -->\r\n\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/fetch-data']\">Fetch data</a>\r\n          </li>\r\n\r\n          <!-- <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n    <a class=\"nav-link text-dark\" [routerLink]=\"['/my-route']\">My route</a>\r\n  </li> -->\r\n\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/register']\">Register</a>\r\n          </li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/login']\">Sign In</a>\r\n          </li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/persons']\">Persons</a>\r\n          </li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/inspectionPlans']\">InspectionPlans</a>\r\n          </li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/equipments']\">Equipments</a>\r\n          </li>\r\n          <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n            <a class=\"nav-link text-dark\" [routerLink]=\"['/calibrations']\">Calibrations</a>\r\n          </li>\r\n        </ul>\r\n        </div>\r\n      </div>\r\n    </nav>\r\n  </header>\r\n";
     /***/
   },
 
@@ -156,7 +156,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   /***/
   function src$$_lazy_route_resourceLazyRecursive(module, exports, __webpack_require__) {
     var map = {
-      "./employees/employees.module": ["./src/app/employees/employees.module.ts", "employees-employees-module"],
+      "./calibration/calibrations.module": ["./src/app/calibration/calibrations.module.ts", "calibration-calibrations-module"],
+      "./equipments/equipments.module": ["./src/app/equipments/equipments.module.ts", "equipments-equipments-module"],
+      "./inspectionPlans/inspectionPlans.module": ["./src/app/inspectionPlans/inspectionPlans.module.ts", "inspectionPlans-inspectionPlans-module"],
       "./persons/persons.module": ["./src/app/persons/persons.module.ts", "persons-persons-module"]
     };
 
@@ -388,11 +390,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       path: 'my-route',
       component: _counter_counter_component__WEBPACK_IMPORTED_MODULE_10__["CounterComponent"]
     }, {
-      path: 'employees',
-      loadChildren: './employees/employees.module#EmployeesModule'
+      path: 'equipments',
+      loadChildren: './equipments/equipments.module#EquipmentsModule'
     }, {
       path: 'persons',
       loadChildren: './persons/persons.module#PersonsModule'
+    }, {
+      path: 'inspectionPlans',
+      loadChildren: './inspectionPlans/inspectionPlans.module#InspectionPlansModule'
+    }, {
+      path: 'calibrations',
+      loadChildren: './calibration/calibrations.module#CalibrationsModule'
     }];
 
     var AppModule = function AppModule() {

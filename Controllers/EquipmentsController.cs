@@ -25,6 +25,8 @@ namespace Examen3.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Equipment>>> GetEquipments()
         {
+            
+
             IQueryable<Equipment> result = _context.Equipments;
             var resultList = await result.OrderByDescending(t => t.CalibrationDate).ToListAsync();
             return resultList;

@@ -12,7 +12,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Examen2.Controllers
+namespace Examen3.Controllers
 {
     [AllowAnonymous]
     public class AccountController : Controller

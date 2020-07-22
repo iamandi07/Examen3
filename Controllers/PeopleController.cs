@@ -25,6 +25,8 @@ namespace Examen3.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Person>>> GetPersons()
         {
+            var identity = User.Identity;
+
             IQueryable<Person> result = _context.Persons;
             var resultList = await result.OrderByDescending(t => t.Name).ToListAsync();
             return resultList;
